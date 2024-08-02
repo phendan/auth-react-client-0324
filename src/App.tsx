@@ -166,7 +166,7 @@ function RegisterPage() {
         event.preventDefault();
         try {
             await http.get('/sanctum/csrf-cookie');
-            const response = await http.post('/api/register', {
+            await http.post('/api/register', {
                 username,
                 password,
                 email
